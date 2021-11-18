@@ -10,5 +10,9 @@
   "devDependencies": {
     "cypress": "^9.0.0"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "faker": "^5.5.3",
+    "js-brasil": "^2.5.1"
+  }
 }
