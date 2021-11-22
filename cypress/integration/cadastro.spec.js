@@ -11,10 +11,6 @@ describe('Testes positivos de cadastro de usuário', () => {
     it('Cadastro de usuário com CPF', () => {
         cadastrarUsuario.realizarCadastroCorretoCPF()
     })
-
-    it('Cadastro de usuário com CNPJ', () => {
-        cadastrarUsuario.realizarCadastroCorretoCNPJ()
-    })
 })
 
 describe('Testes megativos de cadastro de usuário', () => {
@@ -23,12 +19,8 @@ describe('Testes megativos de cadastro de usuário', () => {
         cadastrarUsuario.acessarSite()
     })
 
-    it.only('Cadastro inválido de usuário com CPF', () => {
+    it('Cadastro inválido de usuário com CPF', () => {
         cadastrarUsuario.realizarCadastroInvalidoCPF()
-    })
-
-    it.only('Cadastro inválido de usuário com CNPJ', () => {
-        cadastrarUsuario.realizarCadastroInvalidoCNPJ()
     })
 })
 
