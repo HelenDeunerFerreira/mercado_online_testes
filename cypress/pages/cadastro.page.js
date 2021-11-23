@@ -33,9 +33,9 @@ function aleatorio() {
 }
 
 let CPF = gerarCpf()
-let email = `${faker.internet.email}`
-let nome = `${faker.name.firstName}` + `${faker.name.lastName}`
-let senha = `${faker.internet.password}`
+let email = `${faker.internet.email()}`
+let nome = `${faker.name.firstName()} ${faker.name.lastName()}`
+let senha = `${faker.internet.password()}`
 let celular = `54${faker.datatype.number(111111111)}`
 let telFixo = `54${faker.datatype.number(111111111)}`
 let CEP1 = `99010`
@@ -54,7 +54,7 @@ export default class cadastrarUsuario extends Base {
     static realizarCadastroCorretoCPF() {
         super.clickOnElement(CADASTRO.FORM_PESSOA_FISICA)
         super.typeValue(CADASTRO.FORM_NOME, nome)
-        super.typeValue(CADASTRO.FORM_CPF, gerarCpf())
+        super.typeValue(CADASTRO.FORM_CPF, CPF)
         super.typeValue(CADASTRO.FORM_EMAIL, email)
         super.typeValue(CADASTRO.FORM_EMAIL_VERIFICACAO, email)
         super.typeValue(CADASTRO.FORM_SENHA, senha)
@@ -62,6 +62,8 @@ export default class cadastrarUsuario extends Base {
 
         super.typeValue(CADASTRO.FORM_CELULAR, celular)
         super.typeValue(CADASTRO.FORM_TEL_FIXO, telFixo)
+
+        super.clickOnElement(CADASTRO.BOTAO_AVANCAR)
 
         // super.typeValue(CADASTRO.FORM_CEP_1, CEP1)
         // super.typeValue(CADASTRO.FORM_CEP_2, CEP2)
@@ -80,6 +82,8 @@ export default class cadastrarUsuario extends Base {
 
         super.typeValue(CADASTRO.FORM_CELULAR, celular)
         super.typeValue(CADASTRO.FORM_TEL_FIXO, telFixo)
+
+        super.clickOnElement(CADASTRO.BOTAO_AVANCAR)
 
         // super.typeValue(CADASTRO.FORM_CEP_1, CEP1)
         // super.typeValue(CADASTRO.FORM_CEP_2, CEP2)
