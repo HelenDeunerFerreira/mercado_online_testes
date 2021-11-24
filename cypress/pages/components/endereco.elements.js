@@ -1,9 +1,7 @@
 export const ENDERECO = {
-    URL_ENDERECO: "https://701523.commercesuite.com.br/my-account/",
+    BOTAO_CADASTRO_ENDERECO: "[href='/my-account/addresses/'] > .app__navigation__item__icon",
 
-    BOTAO_CADASTRO_ENDERECO: "[data-icon='map-marked-alt']",
-
-    BOTAO_EDITAR: "[class='app__button app__button--primary-outline app__button--no-margin']",
+    BOTAO_EDITAR: "a.app__button",
 
     NOME_ENDERECO: "[id=address-description]",
     RUA: "[id=address-description]",
@@ -14,6 +12,8 @@ export const ENDERECO = {
     BOTAO_SALVAR_ALTERACOES: "[class='app__button app__button--primary app__button--no-margin']",
 
     MSG_ERRO: ".app__input-group__feedbacks__feedback",
+
+    ALTERAR_TELEFONE: "[id=customer-mobile_phone]",
 
     URL_VERIFICACAO: "https://701523.commercesuite.com.br/my-account/addresses/"
 }

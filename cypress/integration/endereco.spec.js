@@ -8,14 +8,14 @@ describe('Testes com cadastro de endereço', () => {
     it('O cadastro de endereço deve ser realizado corretamente', () => {
         Login.acessarSite()
         Login.loginCorreto()
-        CadastroEndreco.acessarSite()
+
         CadastroEndreco.realizarCadastroValido()
     })
 
-    it('O endereço não deve ser cadastrado e retornar que o nome não foi informado', () => {
+    it('Deve retornar que o CEP não foi informado pelo usuário e não cadastrar o endereço', () => {
         Login.acessarSite()
         Login.loginCorreto()
-        CadastroEndreco.acessarSite()
+
         CadastroEndreco.cadastroInvalido()
     })
 })

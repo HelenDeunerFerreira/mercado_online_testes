@@ -9,7 +9,7 @@ describe('Testes com login', () => {
         Login.loginCorreto()
     })
 
-    it('O login não deve ser realizado e deve apresentar mensagem de erro', () => {
+    it('O login não deve ser realizado e deve apresentar mensagem de erro na verificação da senha', () => {
         Login.acessarSite()
         Login.loginInvalido()
     })

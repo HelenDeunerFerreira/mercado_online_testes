@@ -39,7 +39,7 @@ let senha = `${faker.internet.password()}`
 let celular = `54${faker.datatype.number(111111111)}`
 let telFixo = `5433${faker.datatype.number(1111111)}`
 
-export default class cadastrarUsuario extends Base {
+export default class CadastrarUsuario extends Base {
     static acessarSite() {
         cy.visit(CADASTRO.URL_CADASTRO)
     }
@@ -58,8 +58,11 @@ export default class cadastrarUsuario extends Base {
 
         super.clickOnElement(CADASTRO.BOTAO_AVANCAR)
 
-        super.validarUrl(CADASTRO.URL_VERIFICACAO)
         cy.writeFile('./cypress/fixtures/example.json', { nome: nome, email: email, senha: senha, CPF: CPF })
+    }
+
+    static verificarUrl() {
+        super.validarUrl(CADASTRO.URL_VERIFICACAO)
     }
 
     static realizarCadastroInvalidoCPF() {

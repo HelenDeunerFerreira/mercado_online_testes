@@ -1,26 +1,27 @@
 /// <reference types="cypress" />
 
-import cadastrarUsuario from "../pages/cadastro.page"
+import CadastrarUsuario from "../pages/cadastro.page"
 
 describe('Testes positivos de cadastro de usuário', () => {
 
     beforeEach(() => {
-        cadastrarUsuario.acessarSite()
+        CadastrarUsuario.acessarSite()
     })
 
-    it('Cadastro de usuário com CPF', () => {
-        cadastrarUsuario.realizarCadastroCorretoCPF()
+    it('Cadastro válido de usuário com CPF', () => {
+        CadastrarUsuario.realizarCadastroCorretoCPF()
+        CadastrarUsuario.verificarUrl()
     })
 })
 
-describe('Testes megativos de cadastro de usuário', () => {
+describe('Testes negativos de cadastro de usuário', () => {
 
     beforeEach(() => {
-        cadastrarUsuario.acessarSite()
+        CadastrarUsuario.acessarSite()
     })
 
     it('Cadastro inválido de usuário com CPF', () => {
-        cadastrarUsuario.realizarCadastroInvalidoCPF()
+        CadastrarUsuario.realizarCadastroInvalidoCPF()
     })
 })
 

@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 2,
-    "passes": 0,
+    "suites": 4,
+    "tests": 8,
+    "passes": 6,
     "pending": 0,
     "failures": 2,
-    "start": "2021-11-19T20:10:11.462Z",
-    "end": "2021-11-19T20:10:46.793Z",
-    "duration": 607,
-    "testsRegistered": 2,
-    "passPercent": 0,
+    "start": "2021-11-24T20:10:05.698Z",
+    "end": "2021-11-24T20:12:50.213Z",
+    "duration": 147688,
+    "testsRegistered": 8,
+    "passPercent": 75,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,89 +18,341 @@
   },
   "results": [
     {
-      "uuid": "a138852f-a2d0-4f0c-ac15-f73266e0866b",
+      "uuid": "33094403-12ea-4d6d-bcb0-f779bcdca9f7",
       "title": "",
       "fullFile": "cypress/integration/cadastro.spec.js",
       "file": "cypress/integration/cadastro.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
-      "tests": [
+      "tests": [],
+      "suites": [
         {
-          "title": "An uncaught error was detected outside of a test",
-          "fullTitle": "An uncaught error was detected outside of a test",
-          "timedOut": null,
-          "duration": 357,
-          "state": "failed",
-          "speed": null,
-          "pass": false,
-          "fail": true,
-          "pending": false,
-          "context": null,
-          "code": "throw err;",
-          "err": {
-            "message": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'CPF')\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
-            "estack": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'CPF')\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Object../cypress/pages/components/cadastro.elements.js (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:405:26)\n    at __webpack_require__ (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:20:30)\n    at Object../cypress/pages/cadastro.page.js (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:301:17)\n    at __webpack_require__ (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:20:30)\n    at Object../cypress/integration/cadastro.spec.js (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:119:40)\n    at __webpack_require__ (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:20:30)\n    at Object.0 (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:157000:18)\n    at __webpack_require__ (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:20:30)\n    at eval (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:84:18)\n    at eval (http://localhost:58679/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:87:10)",
-            "diff": null
-          },
-          "uuid": "9d85430b-b0ef-4ab0-8557-22d045c12d2d",
-          "parentUUID": "a138852f-a2d0-4f0c-ac15-f73266e0866b",
-          "isHook": false,
-          "skipped": false
+          "uuid": "772af6fa-278c-45a9-bc28-0688c4293800",
+          "title": "Testes positivos de cadastro de usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastro de usuário com CPF",
+              "fullTitle": "Testes positivos de cadastro de usuário Cadastro de usuário com CPF",
+              "timedOut": null,
+              "duration": 17498,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_cadastro.default.realizarCadastroCorretoCPF();\n_cadastro.default.verificarUrl();",
+              "err": {},
+              "uuid": "4d75b95f-eab0-4a39-b47d-e17815cf5dad",
+              "parentUUID": "772af6fa-278c-45a9-bc28-0688c4293800",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4d75b95f-eab0-4a39-b47d-e17815cf5dad"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17498,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "454fe745-55d7-4c57-befa-737ff9c3e661",
+          "title": "Testes negativos de cadastro de usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastro inválido de usuário com CPF",
+              "fullTitle": "Testes negativos de cadastro de usuário Cadastro inválido de usuário com CPF",
+              "timedOut": null,
+              "duration": 7179,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_cadastro.default.realizarCadastroInvalidoCPF();",
+              "err": {},
+              "uuid": "af3c671c-c641-49f0-bac2-ec65b47716d8",
+              "parentUUID": "454fe745-55d7-4c57-befa-737ff9c3e661",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "af3c671c-c641-49f0-bac2-ec65b47716d8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7179,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
         }
       ],
-      "suites": [],
       "passes": [],
-      "failures": [
-        "9d85430b-b0ef-4ab0-8557-22d045c12d2d"
-      ],
+      "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 357,
+      "duration": 0,
       "root": true,
-      "rootEmpty": false,
+      "rootEmpty": true,
       "_timeout": 2000
     },
     {
-      "uuid": "44af3a97-f5d2-4c67-af81-bb76870eb6c4",
+      "uuid": "757650f8-ef5d-4c8b-b488-968ff9b9fd5c",
       "title": "",
-      "fullFile": "cypress/integration/cadastro.spec.js",
-      "file": "cypress/integration/cadastro.spec.js",
+      "fullFile": "cypress/integration/endereco.spec.js",
+      "file": "cypress/integration/endereco.spec.js",
       "beforeHooks": [],
       "afterHooks": [],
-      "tests": [
+      "tests": [],
+      "suites": [
         {
-          "title": "An uncaught error was detected outside of a test",
-          "fullTitle": "An uncaught error was detected outside of a test",
-          "timedOut": null,
-          "duration": 250,
-          "state": "failed",
-          "speed": null,
-          "pass": false,
-          "fail": true,
-          "pending": false,
-          "context": null,
-          "code": "throw err;",
-          "err": {
-            "message": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'CPF')\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
-            "estack": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'CPF')\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Object../cypress/pages/components/cadastro.elements.js (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:405:26)\n    at __webpack_require__ (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:20:30)\n    at Object../cypress/pages/cadastro.page.js (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:301:17)\n    at __webpack_require__ (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:20:30)\n    at Object../cypress/integration/cadastro.spec.js (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:119:40)\n    at __webpack_require__ (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:20:30)\n    at Object.0 (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:157000:18)\n    at __webpack_require__ (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:20:30)\n    at eval (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:84:18)\n    at eval (http://localhost:55044/__cypress/tests?p=cypress\\integration\\cadastro.spec.js:87:10)",
-            "diff": null
-          },
-          "uuid": "2b5b642d-17d9-4895-8415-66627613d583",
-          "parentUUID": "44af3a97-f5d2-4c67-af81-bb76870eb6c4",
-          "isHook": false,
-          "skipped": false
+          "uuid": "fed5f435-9ea8-49cb-9a1c-11dd14a4fdd5",
+          "title": "Testes com cadastro de endereço",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "O cadastro de endereço deve ser realizado corretamente",
+              "fullTitle": "Testes com cadastro de endereço O cadastro de endereço deve ser realizado corretamente",
+              "timedOut": null,
+              "duration": 20558,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.acessarSite();\n_login.default.loginCorreto();\n_endereco.default.realizarCadastroValido();",
+              "err": {},
+              "uuid": "4f3b5e67-ac05-48bd-92a9-def02aa38298",
+              "parentUUID": "fed5f435-9ea8-49cb-9a1c-11dd14a4fdd5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "O endereço não deve ser cadastrado e retornar que o CEP não foi informado",
+              "fullTitle": "Testes com cadastro de endereço O endereço não deve ser cadastrado e retornar que o CEP não foi informado",
+              "timedOut": null,
+              "duration": 52135,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.acessarSite();\n_login.default.loginCorreto();\n_endereco.default.cadastroInvalido();",
+              "err": {
+                "message": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.",
+                "estack": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.\n    at https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:159581:81\n    at tryCatcher (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:13212:23)\n    at https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:8334:41\n    at tryCatcher (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:7798:14)",
+                "diff": null
+              },
+              "uuid": "afd6e36b-485b-44f6-a8d2-d83d17d01121",
+              "parentUUID": "fed5f435-9ea8-49cb-9a1c-11dd14a4fdd5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4f3b5e67-ac05-48bd-92a9-def02aa38298"
+          ],
+          "failures": [
+            "afd6e36b-485b-44f6-a8d2-d83d17d01121"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 72693,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
         }
       ],
-      "suites": [],
       "passes": [],
-      "failures": [
-        "2b5b642d-17d9-4895-8415-66627613d583"
-      ],
+      "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 250,
+      "duration": 0,
       "root": true,
-      "rootEmpty": false,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "af641f7d-21d5-4bdc-bcbe-a4507d4108e5",
+      "title": "",
+      "fullFile": "cypress/integration/login.spec.js",
+      "file": "cypress/integration/login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "55140aea-b3bd-45e2-a475-3971090d6a7d",
+          "title": "Testes com login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "O login deve ser realizado corretamente",
+              "fullTitle": "Testes com login O login deve ser realizado corretamente",
+              "timedOut": null,
+              "duration": 4668,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.acessarSite();\n_login.default.loginCorreto();",
+              "err": {},
+              "uuid": "7e08ac73-4d8f-4408-91c9-17b0067518d3",
+              "parentUUID": "55140aea-b3bd-45e2-a475-3971090d6a7d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "O login não deve ser realizado e deve apresentar mensagem de erro",
+              "fullTitle": "Testes com login O login não deve ser realizado e deve apresentar mensagem de erro",
+              "timedOut": null,
+              "duration": 3797,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.acessarSite();\n_login.default.loginInvalido();",
+              "err": {},
+              "uuid": "b1454ff1-053c-4ec2-a04e-f059492a37a7",
+              "parentUUID": "55140aea-b3bd-45e2-a475-3971090d6a7d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7e08ac73-4d8f-4408-91c9-17b0067518d3",
+            "b1454ff1-053c-4ec2-a04e-f059492a37a7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8465,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b791014c-b69c-4c65-b8ae-a33303793ab3",
+      "title": "",
+      "fullFile": "cypress/integration/mercadoria.spec.js",
+      "file": "cypress/integration/mercadoria.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7a8a0a8a-5f7e-4cb5-9e29-d622f946b5e5",
+          "title": "Testes com a mercadoria do carrinho",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve verificar se o produto/mercadoria foi adicionado ao carrinho corretamente",
+              "fullTitle": "Testes com a mercadoria do carrinho Deve verificar se o produto/mercadoria foi adicionado ao carrinho corretamente",
+              "timedOut": null,
+              "duration": 38239,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_mercadoria.default.acessarSite();\n_mercadoria.default.conferirProdutoNoCarrinho();",
+              "err": {
+                "message": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.",
+                "estack": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.\n    at https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:159581:81\n    at tryCatcher (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:13212:23)\n    at https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:8334:41\n    at tryCatcher (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:7798:14)",
+                "diff": null
+              },
+              "uuid": "70b94b34-e317-4811-a9da-3d6cfde6172e",
+              "parentUUID": "7a8a0a8a-5f7e-4cb5-9e29-d622f946b5e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "O produto não deve ser adicionado ao carrinho e a lista de itens deve retornar vazia",
+              "fullTitle": "Testes com a mercadoria do carrinho O produto não deve ser adicionado ao carrinho e a lista de itens deve retornar vazia",
+              "timedOut": null,
+              "duration": 3614,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_mercadoria.default.acessarSite();\n_mercadoria.default.carrinhoVazio();",
+              "err": {},
+              "uuid": "57fab81d-d011-4d08-bc40-c88bcad2fff8",
+              "parentUUID": "7a8a0a8a-5f7e-4cb5-9e29-d622f946b5e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "57fab81d-d011-4d08-bc40-c88bcad2fff8"
+          ],
+          "failures": [
+            "70b94b34-e317-4811-a9da-3d6cfde6172e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 41853,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
       "_timeout": 2000
     }
   ],
