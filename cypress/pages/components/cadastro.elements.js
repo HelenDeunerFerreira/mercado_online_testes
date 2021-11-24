@@ -21,5 +21,7 @@ export const CADASTRO = {
 
     URL_CADASTRO: "https://701523.commercesuite.com.br/cadastro",
 
-    VERIFICACAO_CADASTRO: "[data-customer=name]"
+    VERIFICACAO_CADASTRO: "[data-customer=name]",
+
+    URL_VERIFICACAO: "loja"
 }
