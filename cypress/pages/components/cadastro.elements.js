@@ -13,10 +13,6 @@ export const CADASTRO = {
     FORM_CELULAR: "[id=telefone_cliente_2]",
     FORM_TEL_FIXO: "[id=telefone_cliente]",
 
-    FORM_CEP_1: "[id=cep_1]",
-    FORM_CEP_2: "[id=cep_2]",
-    FORM_NUM_CASA: "[id=numero_endereco]",
-
     BOTAO_AVANCAR: "[class=botao-commerce-img]",
 
     URL_CADASTRO: "https://701523.commercesuite.com.br/cadastro",

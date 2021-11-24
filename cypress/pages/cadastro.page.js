@@ -38,13 +38,6 @@ let nome = `${faker.name.firstName()} ${faker.name.lastName()}`
 let senha = `${faker.internet.password()}`
 let celular = `54${faker.datatype.number(111111111)}`
 let telFixo = `5433${faker.datatype.number(1111111)}`
-let CEP1 = `99010`
-let CEP2 = `100`
-let endereco = `R. Paissandú`
-// let numCasa = `660`
-// let bairro = `Centro`
-// let cidade = `Passo Fundo`
-// let estado = `[value=RS]`
 
 export default class cadastrarUsuario extends Base {
     static acessarSite() {
@@ -65,9 +58,6 @@ export default class cadastrarUsuario extends Base {
 
         super.clickOnElement(CADASTRO.BOTAO_AVANCAR)
 
-        // super.typeValue(CADASTRO.FORM_CEP_1, CEP1)
-        // super.typeValue(CADASTRO.FORM_CEP_2, CEP2)
-
         super.validarUrl(CADASTRO.URL_VERIFICACAO)
         cy.writeFile('./cypress/fixtures/example.json', { nome: nome, email: email, senha: senha, CPF: CPF })
     }
@@ -85,8 +75,5 @@ export default class cadastrarUsuario extends Base {
         super.typeValue(CADASTRO.FORM_TEL_FIXO, telFixo)
 
         super.clickOnElement(CADASTRO.BOTAO_AVANCAR)
-
-        // super.typeValue(CADASTRO.FORM_CEP_1, CEP1)
-        // super.typeValue(CADASTRO.FORM_CEP_2, CEP2)
     }
 }
