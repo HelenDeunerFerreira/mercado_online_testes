@@ -15,6 +15,9 @@ export default class ConferirMercadoria extends Base {
         super.getElement(MERCADORIA.ITEM_MENU_CARRINHO)
 
         super.clickOnElement(MERCADORIA.BOTAO_FINALIZAR)
+    }
+
+    static compraFinalizada() {
         super.validarUrl(MERCADORIA.URL_COMPRA_FINAL)
     }
 

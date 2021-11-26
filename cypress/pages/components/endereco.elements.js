@@ -13,7 +13,7 @@ export const ENDERECO = {
 
     MSG_ERRO: ".app__input-group__feedbacks__feedback",
 
-    ALTERAR_TELEFONE: "[id=customer-mobile_phone]",
+    ALTERAR_TELEFONE: "[id=customer-phone]",
 
     URL_VERIFICACAO: "https://701523.commercesuite.com.br/my-account/addresses/"
 }

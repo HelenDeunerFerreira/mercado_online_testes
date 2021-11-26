@@ -36,7 +36,7 @@ let CPF = gerarCpf()
 let email = `${faker.internet.email()}`
 let nome = `${faker.name.firstName()} ${faker.name.lastName()}`
 let senha = `${faker.internet.password()}`
-let celular = `54${faker.datatype.number(111111111)}`
+let celular = `54999${faker.datatype.number(1111111)}`
 let telFixo = `5433${faker.datatype.number(1111111)}`
 
 export default class CadastrarUsuario extends Base {
@@ -58,7 +58,7 @@ export default class CadastrarUsuario extends Base {
 
         super.clickOnElement(CADASTRO.BOTAO_AVANCAR)
 
-        cy.writeFile('./cypress/fixtures/example.json', { nome: nome, email: email, senha: senha, CPF: CPF })
+        cy.writeFile('./cypress/fixtures/example.json', { nome: nome, email: email, senha: senha, CPF: CPF, celular: celular })
     }
 
     static verificarUrl() {
